@@ -53,7 +53,6 @@ def eval_right_to_left_plus(equation):
 def part2():
     total = 0
     operator = ['+', '*','||']
-    cpt = 0
     with open('data_d7') as f:
         for line in f:
             result, equation_str = line.strip(":").split(" ", 1)
@@ -62,9 +61,6 @@ def part2():
             
             n = len(num) - 1 
             found = False
-            cpt+=1 
-            print(cpt)
-            
             for symbols in generate_operator_combinations(operator, n):
                 equation = []
                 for j in range(len(num) - 1):

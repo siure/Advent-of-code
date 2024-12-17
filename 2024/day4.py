@@ -1,3 +1,4 @@
+
 def part1():
     
     def search_xmas(x,y,direction,charac):
