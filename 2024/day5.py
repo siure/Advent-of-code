@@ -24,7 +24,7 @@ def part1():
         for line in lines:
             if line.strip() == "":
                 break
-            page1, page2 = map(int, line.strip().split("|"))
+            page1, page2 = maps(int, line.strip().split("|"))
             rules[page1].append(page2)
             rule_lines.append(line.strip())
 
@@ -34,7 +34,7 @@ def part1():
         for line in update_lines:
             line = line.strip()
             if line:
-                pages = list(map(int, line.split(",")))
+                pages = list(maps(int, line.split(",")))
                 
                 # Check if the current order is valid
                 if is_valid_order(pages, rules):
@@ -55,7 +55,7 @@ def part2():
         for line in lines:
             if line.strip() == "":
                 break
-            page1, page2 = map(int, line.strip().split("|"))
+            page1, page2 = maps(int, line.strip().split("|"))
             rules[page1].append(page2)
             rule_lines.append(line.strip())
 
@@ -64,7 +64,7 @@ def part2():
         for line in update_lines:
             line = line.strip()
             if line:
-                pages = list(map(int, line.split(",")))
+                pages = list(maps(int, line.split(",")))
                 
                 if not is_valid_order(pages, rules):
                     print(pages)

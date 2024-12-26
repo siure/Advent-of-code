@@ -5,7 +5,7 @@ def part1():
         for line in f:
             total += 1
             
-            unusual = list(map(int, line.strip().split(" ")))
+            unusual = list(maps(int, line.strip().split(" ")))
             change = -1 if (unusual[0] - unusual[1]) > 0 else 1
             for i in range(0, len(unusual) - 1):
                 increment = unusual[i] - unusual[i + 1]
@@ -19,7 +19,7 @@ def part2():
     total = 0
     with open("data_d2") as f:
         for line in f:
-            unusual = list(map(int, line.strip().split(" ")))
+            unusual = list(maps(int, line.strip().split(" ")))
             for i in range(len(unusual)):
                 truncated = unusual[:i] + unusual[i + 1:]
                 diffs = [truncated[i]- truncated[i+1] for i in range(len(truncated)-1)]

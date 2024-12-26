@@ -2,7 +2,7 @@ def read_pairs(path):
     first =[]; second = []
     with open(path) as f:
         for line in f:
-            n1, n2 =map(int, line.strip().split('   '))
+            n1, n2 =maps(int, line.strip().split('   '))
             first.append(n1)
             second.append(n2)
         
